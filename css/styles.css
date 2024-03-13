@@ -58,13 +58,7 @@ nav {
     border-color: #555; /* Change border color to match background on hover */
 }
 
-.photo-container {
-    background-color: #555555;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* Make it round */
-    overflow: hidden; /* Hide overflow */
-}
+
 
 #head {
     display: flex;
@@ -77,12 +71,9 @@ nav {
     flex-direction: column;
 }
 
-img {
-    opacity: 0;
-}
 
-img:hover {
-    opacity: 1;
+img {
+    width: 70%;
 }
 
 .sidebar {
