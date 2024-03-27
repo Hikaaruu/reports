@@ -1,8 +1,76 @@
-<div>
-    <img src="pages/lab-3/pics/5.png" alt="Image 5">
-</div>
+<head>
+    <style>
+        main, header, footer {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        #_1 {
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            background: blue;
+        }
+
+        #_2 {
+            background: gold;
+            flex-grow: 1;
+        }
+
+        #_3 {
+            height: 100px;
+            width: 100%;
+            background: blue;
+        }
+
+        #_4 {
+            background: white;
+            flex-grow: 1;
+
+        }
+
+        #_5 {
+            background: gold;
+            flex-grow: 1;
+
+        }
+
+        .main {
+            display: flex;
+            height: 400px;
+            width: 100%;
+        }
+
+        #_2,
+        #_4,
+        #_5 {
+            height: 400px;
+            width: 400px;
+        }
+        .code-container {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: monospace;
+            text-align: left;
+            overflow-x: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
 
 <div>
+    <header id="_1">1</header>
+
+    <main class="main">
+        <div id="_2">2</div>
+        <div id="_4">4</div>
+        <div id="_5">5</div>
+    </main>
+
+    <footer id="_3">3</footer>
+</div>
+
+<div class="code-container">
     <pre>
         <code>
             &#60;!DOCTYPE html&#62;
