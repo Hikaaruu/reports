@@ -1,0 +1,251 @@
+<div>
+    <img src="pages/lab-3/pics/6.png" alt="Image 6">
+    <img src="pages/lab-3/pics/7.png" alt="Image 7">
+
+
+    <pre><code>
+        &lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Ефективні методи навчання&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;header class="header"&gt;
+        &lt;h2&gt;Ефективні методи навчання&lt;/h1&gt;
+        &lt;h1&gt;100% засвоєння матеріалу&lt;/h2&gt;
+        &lt;section class="header-main"&gt;
+            &lt;div class="header-main-text"&gt;
+                &lt;p class="header-main-text-grey"&gt;
+                    Починаючи з 2016 року ми відточували наші методи навчання і знайшли найбільш дієвий спосіб,
+                    який дає можливість студентам опановувати програму краще і в більшому об'ємі.
+                &lt;/p&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        Лекційний матеріал подається окремо. Це дає змогу зосередитись на ознайомленні з ним не
+                        відволікаючись на виконання будь-яких дій.
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        Практичні заняття проходять в окремі дні і включають завдання по попередній лекції. 
+                        При цьому, частина завдань не містить абстрактних умов. Це дає змогу чітко закріпити пройдений 
+                        матеріал. Але є завдання, які змусять вас розвиватись, оскільки будуть вже більш абстрактними, 
+                        і їх виконання буде залежати від вашої уяви.
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        Як результат поєднання попередніх фактори ви опануєте теоретичну частину, закріпите її на практиці в
+                        двох різновидах завдань.
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;img src="img1.png" style="object-fit: contain; width: 100%;"&gt;
+                &lt;button class="header-main-button"&gt;всі відгуки&lt;/button&gt;
+            &lt;/div&gt;
+
+            &lt;/ul&gt;
+        &lt;/section&gt;
+    &lt;/header&gt;
+    &lt;main class="main"&gt;
+        &lt;section&gt;
+            &lt;h2 class="header-text-blue"&gt;Наші курси&lt;/h3&gt;
+            &lt;h1 class="header-text"&gt;Обери напрямок програмування&lt;/h1&gt;
+
+            &lt;div class="language-box-container"&gt;
+                &lt;div class="language-box"&gt;
+                    &lt;p&gt;java complex&lt;/p&gt;
+                    &lt;button class="language-box-button"&gt;Детальніше&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="language-box"&gt;
+                    &lt;p&gt;javascript complex&lt;/p&gt;
+                    &lt;button class="language-box-button"&gt;Детальніше&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="language-box"&gt;
+                    &lt;p&gt;pyrhon complex&lt;/p&gt;
+                    &lt;button class="language-box-button"&gt;Детальніше&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="language-box"&gt;
+                    &lt;p&gt;QA\QC ТЕСТУВАННЯ&lt;/p&gt;
+                    &lt;button class="language-box-button"&gt;Детальніше&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section class="main-footer"&gt;
+            &lt;div style="flex-shrink: 1; margin-top: 50px;"&gt;
+                &lt;img src="img2.png"&gt;
+                &lt;p&gt;Відгук Loonar про випускників Okten&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div style="flex-shrink: 1;"&gt;
+                &lt;div&gt;
+                    &lt;h2 class="header-text"&gt;роботодавці задоволені&lt;/h2&gt;
+                    &lt;h1 class="header-text-blue"&gt;нашими випускниками&lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;img src="img3.png"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;Copyright 2024&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+    </code></pre>
+
+    <pre><code>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        ul {
+            list-style-type: disc;
+            margin: 0;
+        }
+        
+        li {
+            margin-bottom: 0.5em;
+        }
+        
+        .header {
+            background-color: #222222;
+            height: max-content;
+            color: #fff;
+            padding: 1em;
+            margin: 1em;
+        }
+        
+        .header h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        
+        .header h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: #ff9638;
+            font-weight: 900;
+        }
+        
+        .header-main {
+            display: flex;
+        }
+        
+        .header-main-text {
+            flex-shrink: 0;
+            width: 50%;
+            margin: 10px;
+            padding: 10px;
+            margin-right: 5%;
+        }
+        
+        .header-main-text * {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 26px;
+        }
+        
+        .header-main-text-grey {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+            color: #c6c6c6
+        }
+        
+        .header-main-button {
+            margin: 10px 0;
+            background-color: gold;
+            border-radius: 6px;
+            width: 40%;
+            height: 50px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 26px;
+        }
+        
+        .main {
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        .header-text {
+            text-align: center;
+            text-transform: uppercase;
+            color: #000000;
+            font-size: 18px;
+            font-weight: 900;
+            line-height: 1em;
+        }
+        
+        .header-text-blue {
+            text-align: center;
+            text-transform: uppercase;
+            color: #4fc1ff;
+            font-weight: 800;
+            line-height: 1em;
+        }
+        
+        .language-box-container {
+            display: flex;
+            height: 200px;
+            width: 100%;
+        }
+        
+        .language-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: solid 1px #81bfd636;
+            border-radius: 10px;
+            height: 100%;
+            width: 25%;
+            overflow: hidden;
+            margin: 0.5%;
+            text-transform: uppercase;
+            font-weight: 1000;
+            font-size: 3.5vh;
+            color: #4fc1ff;
+            text-align: center;
+        }
+        
+        .language-box-button {
+            width: 100%;
+            background-color: #7ab5ca41;
+            border: hidden;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 26px;
+        }
+        
+        .main-footer {
+            display: flex;
+            margin: 50px 0;
+            background-color: #e8f5fd;
+            height: 350px;
+            padding: 20px;
+        }
+        
+        .main-footer img {
+            object-fit: contain; 
+            width: 100%;
+        }
+        
+        
+        footer {
+            background-color: #222222;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+    </code></pre>
+</div>
