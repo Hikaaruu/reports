@@ -1,8 +1,206 @@
 <div>
-    <h1>Способи підключення стилів</h1>
+    <img src="pages/lab-3/pics/1.png" alt="Image 1">
 
-    <p></p>
+    <pre><code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Online Movie Database&lt;/title&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;header&gt;
+                &lt;div class="container"&gt;
+                    &lt;h1&gt;Online Movie Database&lt;/h1&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+        
+            &lt;div class="container"&gt;
+                &lt;div id="search-container"&gt;
+                    &lt;form action="#" method="GET"&gt;
+                        &lt;input type="text" name="search" placeholder="Search movies..."&gt;
+                        &lt;input type="submit" value="Search"&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+                &lt;h2&gt;Most Popular Movies&lt;/h2&gt;
+                &lt;div class="movies"&gt;
+                    
+                    &lt;div class="movie"&gt;
+                        &lt;img src="src/pictures/movie3.jpg" alt="The Shawshank Redemption"&gt;
+                        &lt;div class="movie-info"&gt;
+                            &lt;h3 class="movie-title"&gt;The Shawshank Redemption&lt;/h3&gt;
+                            &lt;p class="movie-rating"&gt;Rating: 9.3&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+        
+                    &lt;div class="movie"&gt;
+                        &lt;img src="src/pictures/movie1.jpg" alt="The Godfather"&gt;
+                        &lt;div class="movie-info"&gt;
+                            &lt;h3 class="movie-title"&gt;The Godfather&lt;/h3&gt;
+                            &lt;p class="movie-rating"&gt;Rating: 9.2&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+        
+                    &lt;div class="movie"&gt;
+                        &lt;img src="src/pictures/movie2.jpg" alt="The Dark Knight"&gt;
+                        &lt;div class="movie-info"&gt;
+                            &lt;h3 class="movie-title"&gt;The Dark Knight&lt;/h3&gt;
+                            &lt;p class="movie-rating"&gt;Rating: 9.0&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+        
+                    &lt;div class="movie"&gt;
+                        &lt;img src="src/pictures/movie5.jpg" alt="Forrest Gump"&gt;
+                        &lt;div class="movie-info"&gt;
+                            &lt;h3 class="movie-title"&gt;Forrest Gump&lt;/h3&gt;
+                            &lt;p class="movie-rating"&gt;Rating: 8.8&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+        
+                    &lt;div class="movie"&gt;
+                        &lt;img src="src/pictures/movie4.jpg" alt="Pulp Fiction"&gt;
+                        &lt;div class="movie-info"&gt;
+                            &lt;h3 class="movie-title"&gt;Pulp Fiction&lt;/h3&gt;
+                            &lt;p class="movie-rating"&gt;Rating: 8.9&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                &lt;/div&gt;
+                &lt;h2&gt;Highest Rated Movies&lt;/h2&gt;
+                &lt;div class="movies"&gt;
+        
+                    &lt;div class="movie"&gt;
+                        &lt;img src="src/pictures/movie3.jpg" alt="The Shawshank Redemption"&gt;
+                        &lt;div class="movie-info"&gt;
+                            &lt;h3 class="movie-title"&gt;The Shawshank Redemption&lt;/h3&gt;
+                            &lt;p class="movie-rating"&gt;Rating: 9.3&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                   
+                    &lt;div class="movie"&gt;
+                        &lt;img src="src/pictures/movie1.jpg" alt="The Godfather"&gt;
+                        &lt;div class="movie-info"&gt;
+                            &lt;h3 class="movie-title"&gt;The Godfather&lt;/h3&gt;
+                            &lt;p class="movie-rating"&gt;Rating: 9.2&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+        
+                    &lt;div class="movie"&gt;
+                        &lt;img src="src/pictures/movie2.jpg" alt="The Dark Knight"&gt;
+                        &lt;div class="movie-info"&gt;
+                            &lt;h3 class="movie-title"&gt;The Dark Knight&lt;/h3&gt;
+                            &lt;p class="movie-rating"&gt;Rating: 9.0&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+        
+                    &lt;div class="movie"&gt;
+                        &lt;img src="src/pictures/movie6.jpg" alt="12 Angry Men"&gt;
+                        &lt;div class="movie-info"&gt;
+                            &lt;h3 class="movie-title"&gt;12 Angry Men&lt;/h3&gt;
+                            &lt;p class="movie-rating"&gt;Rating: 9.0&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+        
+                    &lt;div class="movie"&gt;
+                        &lt;img src="src/pictures/movie7.jpg" alt="Schindler's List"&gt;
+                        &lt;div class="movie-info"&gt;
+                            &lt;h3 class="movie-title"&gt;Schindler's List&lt;/h3&gt;
+                            &lt;p class="movie-rating"&gt;Rating: 9.0&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                &lt;/div&gt;
+            &lt;/div&gt;
+        
+            &lt;footer&gt;
+                &lt;div class="container"&gt;
+                    &lt;p&gt;&amp;copy; 2024 Online Movie Database&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </code></pre>
+        
 
-    
+
+    <pre><code>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .movies {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .movie {
+            width: 17%;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .movie img {
+            width: 100%;
+            height: auto;
+        }
+        .movie-info {
+            padding: 10px;
+        }
+        .movie-title {
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        .movie-rating {
+            font-size: 14px;
+            color: #888;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        
+        #search-container {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        
+        }
+        </code></pre>
+        
+        
     
 </div>
