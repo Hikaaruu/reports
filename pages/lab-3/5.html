@@ -47,10 +47,14 @@
             height: 400px;
             width: 400px;
         }
-        pre {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
+        .code-container {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: monospace;
+            text-align: left;
+            overflow-x: auto;
+            padding: 10px;
+        }
     </style>
 </head>
 
@@ -66,7 +70,7 @@
     <footer id="_3">3</footer>
 </div>
 
-<div>
+<div class="code-container">
     <pre><code>
         &#60;!DOCTYPE html&#62;
 &#60;html lang="en"&#62;
