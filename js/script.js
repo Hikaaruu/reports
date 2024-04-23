@@ -16,5 +16,9 @@ document.querySelector('.sidebar').addEventListener('click', function(event) {
         }
         xhr.open('GET', baseUrl + buttonId.split('-')[1] + '.html', true);
         xhr.send();
+
+        var script = document.createElement('script');
+        script.src = baseUrl + 'js/code.js';
+        document.head.appendChild(script);
     }
 });

@@ -1,0 +1,51 @@
+<div>
+  <img src="pages/lab-5/pics/1.png" alt="Image 1">
+
+  <div style="display: block; margin-top: 50px;">
+    <h3>HTML</h3>
+    <pre style="background-color: #fff; padding: 20px; border-radius: 5px; overflow-x: auto;">
+        <code>
+          &lt;div id="search-container"&gt;
+          &lt;form id="search-form"&gt;
+              &lt;input type="text" id="search-input" name="search" placeholder="Search movies..."&gt;
+              &lt;input type="submit" value="Search"&gt;
+          &lt;/form&gt;
+          &lt;/div&gt;
+        </code>
+    </pre>
+  </div>
+
+  <div style="display: block; margin-top: 50px;">
+    <h3>JavaScript</h3>
+    <pre style="background-color: #fff; padding: 20px; border-radius: 5px; overflow-x: auto;">
+      <code>
+        document.addEventListener("DOMContentLoaded", function() {
+          const searchForm = document.getElementById("search-form");
+          const searchInput = document.getElementById("search-input");
+          const popularMovies = document.getElementById("popular-movies");
+          const highestRatedMovies = document.getElementById("highest-rated-movies");
+      
+          function filterMovies(query) {
+              const allMovies = Array.from(document.querySelectorAll(".movie"));
+              allMovies.forEach(movie => {
+                  const title = movie.querySelector(".movie-title").textContent.toLowerCase();
+                  if (title.includes(query.toLowerCase())) {
+                      movie.style.display = "block";
+                  } else {
+                      movie.style.display = "none";
+                  }
+              });
+          }
+          
+          searchForm.addEventListener("submit", function(event) {
+              event.preventDefault();
+              const query = searchInput.value.trim();
+              filterMovies(query);
+          });
+      });
+      
+      </code>
+  </pre>
+  </div>
+        
+</div>

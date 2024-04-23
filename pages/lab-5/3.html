@@ -1,0 +1,120 @@
+<div>
+  <section>
+
+    <h2>Task 1: Array Operations</h2>
+
+    <form style="display: flex; flex-direction: column; margin-top: 20px;">
+      <label for="input">Enter comma-separated numbers:</label>
+      <input id="input" type="text" style="width: 25em; margin: 0.25em 0; padding: 0; box-sizing: border-box;">
+      <input id="button" type="button" value="Perform Operations"
+        style="width: 25em; margin: 0.25em 0; padding: 0; box-sizing: border-box;">
+    </form>
+
+    <div id="result">
+    </div>
+
+  </section>
+
+  <div style="display: block; margin-top: 50px;">
+    <h3>HTML</h3>
+    <pre style="background-color: #fff; padding: 20px; border-radius: 5px; overflow-x: auto;">
+        <code>
+          &lt;section&gt;
+          &lt;h2&gt;Task 1: Array Operations&lt;/h2&gt;
+          &lt;form style="display: flex; flex-direction: column;"&gt;
+            &lt;label for="input"&gt;Enter comma-separated numbers:&lt;/label&gt;
+            &lt;input id="input" type="text" style="width: 25em; margin: 0.25em 0; padding: 0; box-sizing: border-box;"&gt;
+            &lt;input id="button" type="button" value="Perform Operations"
+              style="width: 25em; margin: 0.25em 0; padding: 0; box-sizing: border-box;"&gt;
+          &lt;/form&gt;
+          &lt;div id="result"&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+        </code>
+    </pre>
+  </div>
+
+  <div style="display: block; margin-top: 50px;">
+    <h3>JavaScript</h3>
+    <pre style="background-color: #fff; padding: 20px; border-radius: 5px; overflow-x: auto;">
+      <code>
+  const input = document.querySelector('#input');
+  const button = document.querySelector("#button");
+  const result = document.querySelector('#result');
+
+  function getNumbersArray() {
+      const inputValue = input.value;
+
+      const numbers = inputValue.split(",");
+
+      const numbersArray = numbers.map((number) => parseInt(number));
+
+      return numbersArray;
+  }
+
+  function getSum(numbersArray) {
+      const max = Math.max(...numbersArray);
+      const min = Math.min(...numbersArray);
+
+      const maxIndex = numbersArray.indexOf(max);
+      const minIndex = numbersArray.indexOf(min);
+
+      const startIndex = Math.min(maxIndex, minIndex) + 1;
+      const endIndex = Math.max(maxIndex, minIndex);
+
+      let sum = 0;
+
+      for (let i = startIndex; i &lt; endIndex; i++) {
+          sum += numbersArray[i];
+      }
+
+      return sum;
+  }
+
+
+  function quickSort(numbersArray) {
+      if (numbersArray.length &lt;= 1) {
+        return numbersArray;
+      }
+    
+      const pivotIndex = Math.floor(Math.random() * numbersArray.length);
+      const pivot = numbersArray.splice(pivotIndex, 1);
+    
+      const smallerArray = numbersArray.filter((number) => number &lt; pivot);
+      const largerArray = numbersArray.filter((number) => number &gt;= pivot);
+    
+      return quickSort(smallerArray).concat([pivot], quickSort(largerArray));
+    }
+
+  function printHtml(text) {
+
+      const html = result.innerHTML + `&lt;p&gt;${text}&lt;/p&gt;`;
+
+      result.innerHTML = html;
+  }
+
+  function clearHtml() {
+      result.innerHTML = "";
+  }
+
+  function main() {
+      clearHtml();
+
+      const numbersArray = getNumbersArray();
+      printHtml(`Input array: ${numbersArray}`);
+
+      const sum = getSum(numbersArray);
+      printHtml([`Sum = ${sum}`]);
+
+      const sortedArray = quickSort(numbersArray);
+      printHtml(`Sorted array: ${sortedArray}`);
+  }
+
+
+  button.addEventListener("click", main);
+
+      </code>
+  </pre>
+  </div>
+
+</div>
