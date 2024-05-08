@@ -1,0 +1,80 @@
+<div>
+    
+  <img src="pages/lab-6/pics/2.png" alt="Image 2">
+
+  <h3>HTML</h3>
+
+  <pre>
+      <code>
+
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;Resizable Square&lt;/title&gt;
+        &lt;style&gt;
+        #square {
+          width: 200px;
+          height: 200px;
+          border: 2px dashed red;
+          margin: 0 auto;
+        }
+        
+        .buttons {
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        
+        button {
+          margin: 0 5px;
+        }
+        
+        &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h2&gt;Resizable Square&lt;/h2&gt;
+          &lt;div class=&quot;buttons&quot;&gt;
+            &lt;button id=&quot;shrinkButton&quot;&gt;Shrink&lt;/button&gt;
+            &lt;button id=&quot;growButton&quot;&gt;Grow&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div id=&quot;square&quot;&gt;&lt;/div&gt;
+          &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+  </pre>
+
+  <h3>JS</h3>
+
+  <pre>
+      <code>
+        document.getElementById("shrinkButton").addEventListener("click", shrinkSquare);
+        document.getElementById("growButton").addEventListener("click", growSquare);
+        
+        var squareSize = 200; // Initial size of the square
+        
+        function shrinkSquare() {
+          squareSize -= 15;
+          document.getElementById("square").style.width = squareSize + "px";
+          document.getElementById("square").style.height = squareSize + "px";
+        }
+        
+        function growSquare() {
+          squareSize += 15;
+          document.getElementById("square").style.width = squareSize + "px";
+          document.getElementById("square").style.height = squareSize + "px";
+        }
+        
+
+      </code>
+  </pre>
+  
+
+
+  
+
+</div>
+
+
+

@@ -1,0 +1,112 @@
+<div>
+
+  <img src="pages/lab-6/pics/5.png" alt="Image 5">
+
+  <h3>HTML</h3>
+
+  <pre>
+      <code>
+      
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Login Form&lt;/title&gt;
+&lt;style&gt;
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.login-form {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Login Form&lt;/h2&gt;
+  &lt;form class=&quot;login-form&quot;&gt;
+    &lt;label&gt;
+      Email
+      &lt;input type=&quot;email&quot; name=&quot;email&quot; /&gt;
+    &lt;/label&gt;
+    &lt;label&gt;
+      Password
+      &lt;input type=&quot;password&quot; name=&quot;password&quot; /&gt;
+    &lt;/label&gt;
+    &lt;button type=&quot;submit&quot;&gt;Log in&lt;/button&gt;
+  &lt;/form&gt;
+  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code>
+  </pre>
+
+  <h3>JS</h3>
+
+  <pre>
+      <code>
+        document.querySelector(".login-form").addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent page reload
+        
+          // Get form elements
+          var emailInput = this.elements.email;
+          var passwordInput = this.elements.password;
+        
+          // Check if any field is empty
+          if (emailInput.value.trim() === '' || passwordInput.value.trim() === '') {
+            alert('All form fields must be filled in');
+            return;
+          }
+        
+          // Collect form data into an object
+          var formData = {
+            email: emailInput.value.trim(),
+            password: passwordInput.value.trim()
+          };
+        
+          // Display form data in console
+          console.log(formData);
+        
+          // Clear form fields
+          this.reset();
+        });
+        
+
+      </code>
+  </pre>
+
+
+
+
+
+</div>

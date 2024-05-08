@@ -1,0 +1,114 @@
+<div>
+    
+  <img src="pages/lab-6/pics/4.png" alt="Image 4">
+
+  <h3>HTML</h3>
+
+  <pre>
+      <code>
+      
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Categories List&lt;/title&gt;
+&lt;style&gt;
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+#categories {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.item h2 {
+  margin-bottom: 10px;
+}
+
+.item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.item ul li {
+  margin-bottom: 5px;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Categories List&lt;/h2&gt;
+  &lt;ul id=&quot;categories&quot;&gt;
+    &lt;li class=&quot;item&quot;&gt;
+      &lt;h2&gt;Animals&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Cat&lt;/li&gt;
+        &lt;li&gt;Hamster&lt;/li&gt;
+        &lt;li&gt;Horse&lt;/li&gt;
+        &lt;li&gt;Parrot&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;item&quot;&gt;
+      &lt;h2&gt;Products&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Bread&lt;/li&gt;
+        &lt;li&gt;Parsley&lt;/li&gt;
+        &lt;li&gt;Cheese&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;item&quot;&gt;
+      &lt;h2&gt;Technologies&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;HTML&lt;/li&gt;
+        &lt;li&gt;CSS&lt;/li&gt;
+        &lt;li&gt;JavaScript&lt;/li&gt;
+        &lt;li&gt;React&lt;/li&gt;
+        &lt;li&gt;Node.js&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code>
+  </pre>
+
+  <h3>JS</h3>
+
+  <pre>
+      <code>
+        // Count the number of categories
+        var categories = document.querySelectorAll("#categories .item");
+        var numCategories = categories.length;
+        console.log("Number of categories: " + numCategories);
+
+        // Loop through each category and output its title and the number of elements
+        categories.forEach(function(category) {
+          var categoryName = category.querySelector("h2").textContent;
+          var categoryElements = category.querySelectorAll("ul li").length;
+          console.log("Category: " + categoryName);
+          console.log("Elements: " + categoryElements);
+        });
+
+      </code>
+  </pre>
+  
+
+
+  
+
+</div>
+
+
+

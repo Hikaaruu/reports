@@ -1,0 +1,69 @@
+<div>
+    
+  <img src="pages/lab-6/pics/3.png" alt="Image 3">
+
+  <h3>HTML</h3>
+
+  <pre>
+      <code>
+
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;Doubling List Items&lt;/title&gt;
+        &lt;style&gt;
+        ul {
+          list-style-type: none;
+          padding: 0;
+        }
+        
+        li {
+          margin-bottom: 5px;
+        }
+        &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h2&gt;Doubling List Items&lt;/h2&gt;
+          &lt;p&gt;List:&lt;/p&gt;
+          &lt;ul id=&quot;list&quot;&gt;
+            &lt;li&gt;1&lt;/li&gt;
+            &lt;li&gt;4&lt;/li&gt;
+            &lt;li&gt;8&lt;/li&gt;
+            &lt;li&gt;20&lt;/li&gt;
+            &lt;li&gt;16&lt;/li&gt;
+            &lt;li&gt;20&lt;/li&gt;
+            &lt;li&gt;30&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;button id=&quot;doubleButton&quot;&gt;Double&lt;/button&gt;
+          &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+  </pre>
+
+  <h3>JS</h3>
+
+  <pre>
+      <code>
+        document.getElementById("doubleButton").addEventListener("click", doubleListItems);
+
+        function doubleListItems() {
+          var listItems = document.querySelectorAll("#list li");
+          listItems.forEach(function(item) {
+            var currentValue = parseInt(item.textContent);
+            item.textContent = currentValue * 2;
+          });
+        }
+      </code>
+  </pre>
+  
+
+
+  
+
+</div>
+
+
+

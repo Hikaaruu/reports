@@ -1,0 +1,66 @@
+<div>
+    
+    <img src="pages/lab-6/pics/1.png" alt="Image 1">
+
+    <h3>HTML</h3>
+
+    <pre>
+        <code>
+
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;title&gt;Swap Inputs&lt;/title&gt;
+            &lt;style&gt;
+            body {
+              font-family: Arial, sans-serif;
+              text-align: center;
+            }
+            
+            input {
+              margin-bottom: 10px;
+            }
+            
+            &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;h2&gt;Swap Inputs&lt;/h2&gt;
+              &lt;input type=&quot;text&quot; id=&quot;input1&quot; placeholder=&quot;Input 1&quot;&gt;
+              &lt;br&gt;
+              &lt;input type=&quot;text&quot; id=&quot;input2&quot; placeholder=&quot;Input 2&quot;&gt;
+              &lt;br&gt;
+              &lt;button id=&quot;swapButton&quot;&gt;SWAP ME&lt;/button&gt;
+              &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+    </pre>
+
+    <h3>JS</h3>
+
+    <pre>
+        <code>
+            document.getElementById("swapButton").addEventListener("click", swapContent);
+
+            function swapContent() {
+            var input1 = document.getElementById("input1").value;
+            var input2 = document.getElementById("input2").value;
+
+            // Swapping the values
+            document.getElementById("input1").value = input2;
+            document.getElementById("input2").value = input1;
+            }
+
+        </code>
+    </pre>
+    
+
+
+    
+
+</div>
+
+
+

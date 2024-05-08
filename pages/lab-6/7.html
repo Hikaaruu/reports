@@ -1,0 +1,63 @@
+<div>
+
+  <img src="pages/lab-6/pics/6.png" alt="Image 6">
+
+  <h3>HTML</h3>
+
+  <pre>
+      <code>
+      
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Change Background Color&lt;/title&gt;
+&lt;style&gt;
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.widget {
+  margin-top: 50px;
+}
+
+.color {
+  font-weight: bold;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;widget&quot;&gt;
+    &lt;p&gt;Background color: &lt;span class=&quot;color&quot;&gt;-&lt;/span&gt;&lt;/p&gt;
+    &lt;button type=&quot;button&quot; class=&quot;change-color&quot;&gt;Change color&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code>
+  </pre>
+
+  <h3>JS</h3>
+
+  <pre>
+      <code>document.querySelector(".change-color").addEventListener("click", function() {
+        var newColor = getRandomHexColor();
+        document.body.style.backgroundColor = newColor;
+        document.querySelector(".color").textContent = newColor;
+      });
+      
+      function getRandomHexColor() {
+        return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+      }
+      
+      </code>
+  </pre>
+
+
+
+
+
+</div>

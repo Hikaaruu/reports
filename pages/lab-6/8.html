@@ -1,0 +1,99 @@
+<div>
+
+  <img src="pages/lab-6/pics/7.png" alt="Image 7">
+
+  <h3>HTML</h3>
+
+  <pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Create and Destroy Boxes&lt;/title&gt;
+    &lt;style&gt;
+    #controls {
+      margin-bottom: 20px;
+    }
+    
+    #boxes {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .box {
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+    }
+    
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div id=&quot;controls&quot;&gt;
+        &lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;100&quot; step=&quot;1&quot; id=&quot;inputAmount&quot; /&gt;
+        &lt;button type=&quot;button&quot; data-create id=&quot;createButton&quot;&gt;Create&lt;/button&gt;
+        &lt;button type=&quot;button&quot; data-destroy id=&quot;destroyButton&quot;&gt;Destroy&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;boxes&quot;&gt;&lt;/div&gt;
+      &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+    </pre>
+    
+
+  <h3>JS</h3>
+
+  <pre>
+      <code>
+        document.getElementById("createButton").addEventListener("click", function() {
+          var inputAmount = document.getElementById("inputAmount").value;
+          
+          // Validate input
+          if (inputAmount < 1 || inputAmount > 100) {
+            alert("Please enter a number between 1 and 100.");
+            return;
+          }
+        
+          // Clear previous boxes
+          destroyBoxes();
+        
+          // Create new boxes
+          createBoxes(inputAmount);
+        });
+        
+        document.getElementById("destroyButton").addEventListener("click", function() {
+          destroyBoxes();
+        });
+        
+        function createBoxes(amount) {
+          var boxesContainer = document.getElementById("boxes");
+          for (var i = 0; i < amount; i++) {
+            var box = document.createElement("div");
+            box.classList.add("box");
+            box.style.width = 30 + i * 10 + "px";
+            box.style.height = 30 + i * 10 + "px";
+            box.style.backgroundColor = getRandomHexColor();
+            boxesContainer.appendChild(box);
+          }
+        }
+        
+        function destroyBoxes() {
+          var boxesContainer = document.getElementById("boxes");
+          boxesContainer.innerHTML = "";
+        }
+        
+        function getRandomHexColor() {
+          return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0")}`;
+        }
+        
+      </code>
+  </pre>
+
+
+
+
+
+</div>
