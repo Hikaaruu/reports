@@ -44,7 +44,7 @@ body {
 
   <pre>
       <code>document.querySelector(".change-color").addEventListener("click", function() {
-        var newColor = getRandomHexColor();
+        let newColor = getRandomHexColor();
         document.body.style.backgroundColor = newColor;
         document.querySelector(".color").textContent = newColor;
       });

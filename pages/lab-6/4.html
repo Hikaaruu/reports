@@ -50,9 +50,9 @@
         document.getElementById("doubleButton").addEventListener("click", doubleListItems);
 
         function doubleListItems() {
-          var listItems = document.querySelectorAll("#list li");
+          let listItems = document.querySelectorAll("#list li");
           listItems.forEach(function(item) {
-            var currentValue = parseInt(item.textContent);
+            let currentValue = parseInt(item.textContent);
             item.textContent = currentValue * 2;
           });
         }

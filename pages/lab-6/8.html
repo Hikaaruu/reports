@@ -49,7 +49,7 @@
   <pre>
       <code>
         document.getElementById("createButton").addEventListener("click", function() {
-          var inputAmount = document.getElementById("inputAmount").value;
+          let inputAmount = document.getElementById("inputAmount").value;
           
           // Validate input
           if (inputAmount < 1 || inputAmount > 100) {
@@ -69,9 +69,9 @@
         });
         
         function createBoxes(amount) {
-          var boxesContainer = document.getElementById("boxes");
-          for (var i = 0; i < amount; i++) {
-            var box = document.createElement("div");
+          let boxesContainer = document.getElementById("boxes");
+          for (let i = 0; i < amount; i++) {
+            let box = document.createElement("div");
             box.classList.add("box");
             box.style.width = 30 + i * 10 + "px";
             box.style.height = 30 + i * 10 + "px";
@@ -81,7 +81,7 @@
         }
         
         function destroyBoxes() {
-          var boxesContainer = document.getElementById("boxes");
+          let boxesContainer = document.getElementById("boxes");
           boxesContainer.innerHTML = "";
         }
         

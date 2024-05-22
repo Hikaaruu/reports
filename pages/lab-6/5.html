@@ -89,14 +89,14 @@ h2 {
   <pre>
       <code>
         // Count the number of categories
-        var categories = document.querySelectorAll("#categories .item");
-        var numCategories = categories.length;
+        let categories = document.querySelectorAll("#categories .item");
+        let numCategories = categories.length;
         console.log("Number of categories: " + numCategories);
 
         // Loop through each category and output its title and the number of elements
         categories.forEach(function(category) {
-          var categoryName = category.querySelector("h2").textContent;
-          var categoryElements = category.querySelectorAll("ul li").length;
+          let categoryName = category.querySelector("h2").textContent;
+          let categoryElements = category.querySelectorAll("ul li").length;
           console.log("Category: " + categoryName);
           console.log("Elements: " + categoryElements);
         });

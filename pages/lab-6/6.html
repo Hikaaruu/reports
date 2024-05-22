@@ -79,8 +79,8 @@ body {
           event.preventDefault(); // Prevent page reload
         
           // Get form elements
-          var emailInput = this.elements.email;
-          var passwordInput = this.elements.password;
+          let emailInput = this.elements.email;
+          let passwordInput = this.elements.password;
         
           // Check if any field is empty
           if (emailInput.value.trim() === '' || passwordInput.value.trim() === '') {
@@ -89,7 +89,7 @@ body {
           }
         
           // Collect form data into an object
-          var formData = {
+          let formData = {
             email: emailInput.value.trim(),
             password: passwordInput.value.trim()
           };
